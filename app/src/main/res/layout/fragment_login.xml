@@ -93,6 +93,7 @@
         android:layout_marginTop="60dp"
         android:text="Войти"
         android:textColor="@color/black"
+        android:background="@drawable/shape_button"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
