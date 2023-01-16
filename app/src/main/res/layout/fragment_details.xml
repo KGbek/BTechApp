@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.details.detailsFragment.DetailsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_pager"
+        android:layout_width="330dp"
+        android:layout_height="264dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_view_pager" />
+
+    <me.relex.circleindicator.CircleIndicator2
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_margin="12dp"
+        app:ci_drawable="@drawable/indicator_selector"
+        app:ci_drawable_unselected="@drawable/indicator_default"
+        app:ci_gravity="center"
+        app:ci_orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view_pager" />
+
+    <TextView
+        android:id="@+id/text_view_model"
+        android:layout_width="320dp"
+        android:layout_height="54dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Смартфон Samsung Galaxy A52 5G EU"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indicator" />
+
+    <ImageView
+        android:id="@+id/image_star1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        android:padding="1dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintStart_toStartOf="@+id/text_view_model"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_model" />
+
+    <ImageView
+        android:id="@+id/image_star2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        android:padding="1dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintStart_toEndOf="@+id/image_star1"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_model" />
+
+    <ImageView
+        android:id="@+id/image_star3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        android:padding="1dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintStart_toEndOf="@+id/image_star2"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_model" />
+
+    <ImageView
+        android:id="@+id/image_star4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        android:padding="1dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintStart_toEndOf="@+id/image_star3"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_model" />
+
+    <ImageView
+        android:id="@+id/image_star5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        android:padding="1dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintStart_toEndOf="@+id/image_star4"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_model" />
+
+    <TextView
+        android:id="@+id/text_view_reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="15 отзывов"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/image_star5"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_model" />
+
+    <TextView
+        android:id="@+id/text_view_price"
+        android:layout_width="90dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/cost"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_view_reviews"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_model" />
+
+    <TextView
+        android:id="@+id/text_view_color"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Цвет"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_star1" />
+
+    <TextView
+        android:id="@+id/text_view_memory"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Память"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_color" />
+
+    <TextView
+        android:id="@+id/text_view_review"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Отзывы"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_memory" />
+
+    <ImageView
+        android:id="@+id/arrow1"
+        android:layout_width="10dp"
+        android:layout_height="6dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_color"
+        app:layout_constraintTop_toTopOf="@id/text_view_color" />
+
+    <ImageView
+        android:id="@+id/arrow2"
+        android:layout_width="10dp"
+        android:layout_height="6dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_memory"
+        app:layout_constraintTop_toTopOf="@id/text_view_memory" />
+
+    <ImageView
+        android:id="@+id/arrow3"
+        android:layout_width="10dp"
+        android:layout_height="6dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_review"
+        app:layout_constraintTop_toTopOf="@id/text_view_review" />
+
+    <ImageView
+        android:id="@+id/image_view_like"
+        android:layout_width="18dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_like"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="252dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/text_view_shape3"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:text="В корзину"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_like" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
