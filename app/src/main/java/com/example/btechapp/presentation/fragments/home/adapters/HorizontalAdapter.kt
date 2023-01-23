@@ -1,11 +1,11 @@
-package com.example.btech.presentation.ui.home.adapters
+package com.example.btechapp.presentation.fragments.home.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.btech.databinding.ItemHorizontalBinding
-import com.example.btech.presentation.ui.models.HorizontalModel
+import com.example.btechapp.databinding.ItemHorizontalBinding
+import com.example.btechapp.presentation.fragments.models.HorizontalModel
 
 class HorizontalAdapter(
     private val onItemClick: OnItemClick

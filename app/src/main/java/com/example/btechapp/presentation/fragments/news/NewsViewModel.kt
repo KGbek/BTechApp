@@ -1,4 +1,4 @@
-package com.example.btech.presentation.ui.news
+package com.example.btechapp.presentation.fragments.news
 
 import androidx.lifecycle.ViewModel
 

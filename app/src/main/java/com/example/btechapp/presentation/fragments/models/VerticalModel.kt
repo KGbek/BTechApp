@@ -1,4 +1,4 @@
-package com.example.btech.presentation.ui.models
+package com.example.btechapp.presentation.fragments.models
 
 import android.media.Image
 import java.io.Serializable

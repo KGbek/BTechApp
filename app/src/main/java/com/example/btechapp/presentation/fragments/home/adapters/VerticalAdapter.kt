@@ -1,13 +1,12 @@
-package com.example.btech.presentation.ui.home.adapters
+package com.example.btechapp.presentation.fragments.home.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
-import com.example.btech.R
-import com.example.btech.databinding.ItemVerticalBinding
-import com.example.btech.presentation.ui.models.VerticalModel
+import com.example.btechapp.presentation.fragments.models.VerticalModel
+import com.example.btechapp.R
+import com.example.btechapp.databinding.ItemVerticalBinding
 
 class VerticalAdapter(
     private val onItemClicked: OnItemClicked

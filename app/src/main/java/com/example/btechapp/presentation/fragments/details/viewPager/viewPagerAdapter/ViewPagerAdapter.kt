@@ -1,11 +1,11 @@
-package com.example.btech.presentation.ui.details.viewPagerAdapter
+package com.example.btechapp.presentation.fragments.details.viewPager.viewPagerAdapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.btech.databinding.ItemViewPagerBinding
-import com.example.btech.presentation.ui.details.viewPagerModel.ViewPagerModel
+import com.example.btechapp.presentation.fragments.details.viewPager.viewPagerModel.ViewPagerModel
+import com.example.btechapp.databinding.ItemViewPagerBinding
 
 class ViewPagerAdapter :
     RecyclerView.Adapter<ViewPagerAdapter.ViewHolder>() {
