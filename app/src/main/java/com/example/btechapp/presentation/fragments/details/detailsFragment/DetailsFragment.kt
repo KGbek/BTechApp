@@ -1,4 +1,4 @@
-package com.example.btech.presentation.ui.details.detailsFragment
+package com.example.btechapp.presentation.fragments.details.detailsFragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

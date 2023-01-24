@@ -1,4 +1,4 @@
-package com.example.btech.presentation.ui.models
+package com.example.btechapp.presentation.fragments.models
 
 import java.io.Serializable
 

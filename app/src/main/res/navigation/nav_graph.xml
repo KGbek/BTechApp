@@ -3,11 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/detailFragment">
-
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.example.btech.fragments.DetailFragment"
-        android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        android:id="@+id/profileFragment"
+        android:name="com.example.btechapp.presentation.fragments.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.btechapp.presentation.fragments.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.btechapp.presentation.fragments.cart.CartFragment"
+        android:label="CartFragment" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.btechapp.presentation.fragments.news.NewsFragment"
+        android:label="NewsFragment" />
+    <include app:graph="@navigation/bottom_nav" />
 </navigation>

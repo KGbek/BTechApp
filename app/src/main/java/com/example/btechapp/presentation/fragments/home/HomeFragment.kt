@@ -1,4 +1,4 @@
-package com.example.btech.presentation.ui.home
+package com.example.btechapp.presentation.fragments.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.example.btech.databinding.FragmentHomeBinding
-import com.example.btech.presentation.ui.home.adapters.HorizontalAdapter
-import com.example.btech.presentation.ui.home.adapters.VerticalAdapter
-import com.example.btech.presentation.ui.models.HorizontalModel
-import com.example.btech.presentation.ui.models.VerticalModel
+import com.example.btechapp.presentation.fragments.home.adapters.HorizontalAdapter
+import com.example.btechapp.presentation.fragments.home.adapters.VerticalAdapter
+import com.example.btechapp.presentation.fragments.models.VerticalModel
 import com.example.btechapp.R
+import com.example.btechapp.databinding.FragmentHomeBinding
+import com.example.btechapp.presentation.fragments.models.HorizontalModel
 
 class HomeFragment : Fragment(), HorizontalAdapter.OnItemClick, VerticalAdapter.OnItemClicked {
 
