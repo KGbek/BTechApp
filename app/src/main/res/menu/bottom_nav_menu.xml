@@ -5,22 +5,22 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="Главная" />
 
     <item
         android:id="@+id/navigation_news"
         android:icon="@drawable/ic_fire"
-        android:title="News" />
+        android:title="Новое" />
 
     <item
         android:id="@+id/navigation_cart"
         android:icon="@drawable/ic_cart"
-        android:title="Cart" />
+        android:title="Корзина" />
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_profile"
-        android:title="Profile" />
+        android:title="Профиль" />
 
 
 </menu>
