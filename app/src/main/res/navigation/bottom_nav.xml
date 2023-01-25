@@ -33,6 +33,5 @@
         android:id="@+id/detailsFragment"
         android:name="com.example.btechapp.presentation.fragments.details.detailsFragment.DetailsFragment"
         android:label="DetailsFragment" />
-    <include app:graph="@navigation/nav_graph" />
 
 </navigation>

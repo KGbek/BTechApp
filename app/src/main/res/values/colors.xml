@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="vp_selected_color">#62A9FC</color>
+    <color name="vp_unselected_color">#F1F0F3</color>
+    <color name="tv_memory_color">#605D74</color>
 </resources>

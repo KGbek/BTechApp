@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragments.details.DetailsFragment">
+    tools:context=".presentation.fragments.details.detailsFragment.DetailsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_pager"
@@ -116,7 +116,7 @@
         android:layout_marginTop="6dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/roboto_regular"
-        android:text="@string/cost"
+        android:text="Цена"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/text_view_reviews"
