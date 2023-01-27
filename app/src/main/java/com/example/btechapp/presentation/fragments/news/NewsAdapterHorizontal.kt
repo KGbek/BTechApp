@@ -7,8 +7,8 @@ import coil.load
 import com.example.btechapp.databinding.ItemNewsHorizontalBinding
 import com.example.btechapp.presentation.fragments.models.HorizontalNewsModel
 
-class NewsAdapter() :
-    RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
+class NewsAdapterHorizontal() :
+    RecyclerView.Adapter<NewsAdapterHorizontal.ViewHolder>() {
 
     private val horizontalNewsModel = mutableListOf<HorizontalNewsModel>()
 

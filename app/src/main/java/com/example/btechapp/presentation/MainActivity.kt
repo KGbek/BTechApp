@@ -30,19 +30,19 @@ class MainActivity : AppCompatActivity() {
         bottomNav = binding.bottomNavigation
         bottomNav.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.navigation_home -> {
+                R.id.homeFragment -> {
                     loadFragment(HomeFragment())
                     true
                 }
-                R.id.navigation_news -> {
+                R.id.newsFragment2 -> {
                     loadFragment(NewsFragment())
                 true
                 }
-                R.id.navigation_cart -> {
+                R.id.cartFragment2 -> {
                     loadFragment(CartFragment())
                     true
                 }
-                R.id.navigation_profile -> {
+                R.id.profileFragment -> {
                     loadFragment(ProfileFragment())
                     true
                 }

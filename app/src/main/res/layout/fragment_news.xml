@@ -7,7 +7,7 @@
     tools:context=".presentation.fragments.news.NewsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_cart_horizontal"
+        android:id="@+id/recycler_news_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="160dp"
         android:layout_marginHorizontal="20dp"
@@ -19,7 +19,7 @@
         tools:listitem="@layout/item_news_horizontal" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_cart_vertical"
+        android:id="@+id/recycler_news_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
@@ -27,7 +27,7 @@
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_view_cart_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_news_horizontal"
         app:spanCount="2"
         tools:listitem="@layout/item_vertical" />
 

@@ -1,19 +1,24 @@
 package com.example.btechapp.presentation.fragments.news
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.btechapp.R
+import com.example.btechapp.databinding.FragmentNewsBinding
+import com.example.btechapp.presentation.fragments.home.adapters.HorizontalAdapter
+import com.example.btechapp.presentation.fragments.home.adapters.VerticalAdapter
+import com.example.btechapp.presentation.fragments.models.VerticalModel
 
-class NewsFragment : Fragment() {
+class NewsFragment : Fragment(), NewsAdapterVertical.OnItemClicked {
 
-    companion object {
-        fun newInstance() = NewsFragment()
-    }
-
+    private lateinit var adapterHorizontal: NewsAdapterHorizontal
+    private lateinit var adapterVertical: NewsAdapterVertical
+    private val binding by viewBinding(FragmentNewsBinding::bind)
     private lateinit var viewModel: NewsViewModel
 
     override fun onCreateView(
@@ -23,10 +28,21 @@ class NewsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_news, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(NewsViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.recyclerNewsHorizontal.layoutManager = LinearLayoutManager(requireContext())
+        adapterHorizontal = NewsAdapterHorizontal()
+
+        binding.recyclerNewsVertical.layoutManager = LinearLayoutManager(requireContext())
+        adapterVertical = NewsAdapterVertical(this)
+
+        binding.recyclerNewsHorizontal.adapter = adapterHorizontal
+        binding.recyclerNewsVertical.adapter = adapterVertical
+    }
+
+    override fun clickListener(verticalModel: VerticalModel) {
+        TODO("Not yet implemented")
     }
 
 }
