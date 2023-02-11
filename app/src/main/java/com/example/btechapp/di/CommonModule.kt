@@ -11,7 +11,6 @@ object CommonModule {
             Retrofit.Builder().baseUrl("https://fakestoreapi.com/")
                 .addConverterFactory(GsonConverterFactory.create()).build()
                 .create(Api::class.java)
-
         }
     }
 }
