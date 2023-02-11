@@ -12,13 +12,13 @@
         tools:layout="@layout/fragment_home"/>
 
     <fragment
-        android:id="@+id/newsFragment"
+        android:id="@+id/newsFragment2"
         android:name="com.example.btechapp.presentation.fragments.news.NewsFragment"
         android:label="fragment_news"
         tools:layout="@layout/fragment_news" />
 
     <fragment
-        android:id="@+id/cartFragment"
+        android:id="@+id/cartFragment2"
         android:name="com.example.btechapp.presentation.fragments.cart.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
@@ -33,6 +33,5 @@
         android:id="@+id/detailsFragment"
         android:name="com.example.btechapp.presentation.fragments.details.detailsFragment.DetailsFragment"
         android:label="DetailsFragment" />
-    <include app:graph="@navigation/nav_graph" />
 
 </navigation>
