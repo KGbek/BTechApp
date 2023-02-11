@@ -12,6 +12,7 @@ import com.example.btechapp.presentation.fragments.home.adapters.VerticalAdapter
 import com.example.btechapp.presentation.fragments.models.VerticalModel
 import com.example.btechapp.R
 import com.example.btechapp.databinding.FragmentHomeBinding
+import com.example.btechapp.domain.productModel.ProductModel
 import com.example.btechapp.presentation.fragments.models.HorizontalModel
 
 class HomeFragment : Fragment(), HorizontalAdapter.OnItemClick, VerticalAdapter.OnItemClicked {
@@ -38,6 +39,11 @@ class HomeFragment : Fragment(), HorizontalAdapter.OnItemClick, VerticalAdapter.
         binding.recyclerViewHorizontal.adapter = adapterHorizontal
         binding.recyclerViewVertical.adapter = adapterVertical
     }
+
+//    fun showProducts(products: List<VerticalModel>, productos: List<HorizontalModel>){
+//        adapterVertical.setContent(products)
+//        adapterHorizontal.setContent(productos)
+//    }
 
     override fun clickListener(horizontalModel: HorizontalModel) {
         TODO("Not yet implemented")

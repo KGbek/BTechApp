@@ -12,6 +12,9 @@
     <string name="top_news">Последние новости</string>
     <string name="popular_categories">Популярные категории</string>
     <string name="lots_of_a_day">Товары дня</string>
+    <string name="cost">Цена</string>
+    <string name="credit">Рассрочка</string>
+    <string name="model">Модель</string>
 
     <string-array name="Memory">
         <item>64 GB</item>
