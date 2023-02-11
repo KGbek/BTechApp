@@ -5,7 +5,6 @@ import org.koin.dsl.bind
 import org.koin.dsl.module
 
 object ProductModule {
-
     fun create() = module {
         single {
             RepositotyImpl(get())
