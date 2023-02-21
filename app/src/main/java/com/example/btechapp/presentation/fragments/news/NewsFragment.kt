@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.btechapp.R
@@ -42,7 +43,9 @@ class NewsFragment : Fragment(), NewsAdapterVertical.OnItemClicked {
     }
 
     override fun clickListener(verticalModel: VerticalModel) {
-        TODO("Not yet implemented")
+        val bundle = Bundle()
+        bundle.putSerializable("key", verticalModel)
+        findNavController().navigate(R.id.action_homeFragment_to_detailsFragment, bundle)
     }
 
 }

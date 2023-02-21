@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.btechapp.presentation.fragments.home.adapters.HorizontalAdapter
@@ -38,19 +39,25 @@ class HomeFragment : Fragment(), HorizontalAdapter.OnItemClick, VerticalAdapter.
 
         binding.recyclerViewHorizontal.adapter = adapterHorizontal
         binding.recyclerViewVertical.adapter = adapterVertical
+
+        viewModel.getAllProducts()
     }
 
-//    fun showProducts(products: List<VerticalModel>, productos: List<HorizontalModel>){
-//        adapterVertical.setContent(products)
-//        adapterHorizontal.setContent(productos)
-//    }
+    fun showProducts(products: List<VerticalModel>, productos: List<HorizontalModel>){
+        adapterVertical.setContent(products)
+        adapterHorizontal.setContent(productos)
+    }
 
     override fun clickListener(horizontalModel: HorizontalModel) {
-        TODO("Not yet implemented")
+        val bundle = Bundle()
+        bundle.putSerializable("key", horizontalModel)
+        findNavController().navigate(R.id.action_homeFragment_to_detailsFragment, bundle)
     }
 
     override fun clickListener(verticalModel: VerticalModel) {
-        TODO("Not yet implemented")
+        val bundle = Bundle()
+        bundle.putSerializable("key", verticalModel)
+        findNavController().navigate(R.id.action_homeFragment_to_detailsFragment, bundle)
     }
 
 }
