@@ -33,6 +33,8 @@ class DetailsFragment : Fragment() {
             textViewModel.text = productDetail.title
             textViewColor.text= productDetail.description
             imageViewLot.load(productDetail.image)
+            textViewReviews.text= productDetail.category
+            textViewMemory.text= productDetail.price
         }
     }
 }

@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.btechapp.R
 import com.example.btechapp.databinding.ItemCartBinding
-import com.example.btechapp.presentation.fragments.models.CartModel
+import com.example.btechapp.domain.productModel.ProductModel
 
 class CartAdapter : RecyclerView.Adapter<CartAdapter.ViewHolder>() {
 
-    private val cartModel = mutableListOf<CartModel>()
+    private val cartModel = mutableListOf<ProductModel>()
 
-    fun setContent(modelCart: List<CartModel>) {
+    fun setContent(modelCart: List<ProductModel>) {
         cartModel.clear()
         cartModel.addAll(modelCart)
         notifyDataSetChanged()
@@ -35,12 +35,12 @@ class CartAdapter : RecyclerView.Adapter<CartAdapter.ViewHolder>() {
     class ViewHolder(private val binding: ItemCartBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun onBindCart(cartModel: CartModel) {
+        fun onBindCart(cartModel: ProductModel) {
             binding.imageViewCart.load(cartModel.image)
             binding.imageViewArrow.setImageResource(R.drawable.ic_arrow_drop_up)
-            binding.textViewLot.text = cartModel.model
-            binding.textViewLotCost.text = cartModel.cost
-            binding.textViewColor.text = cartModel.color
+            binding.textViewLot.text = cartModel.title
+            binding.textViewLotCost.text = cartModel.price
+            binding.textViewColor.text = cartModel.description
 
         }
     }

@@ -1,20 +1,17 @@
 package com.example.btechapp.data.repository
 
-import com.example.btechapp.data.core.BaseRepository
-import com.example.btechapp.data.core.Resource
 import com.example.btechapp.data.network.Api
 import com.example.btechapp.domain.productModel.ProductModel
-import com.example.btechapp.domain.repository.Repository
-import kotlinx.coroutines.flow.Flow
+import com.example.btechapp.domain.repository.ProductRepository
 
-class RepositotyImpl(
+class ProductsRemoteRepositoty(
     private val api: Api
-) : Repository, BaseRepository() {
-    override suspend fun getAllProducts() = doRequest {
+) : ProductRepository{
+    override suspend fun getAllProducts(): List<ProductModel> {
 
         val response = api.getAllProducts()
 
-        return@doRequest response.results.map { responseModel ->
+        return response.map { responseModel ->
             ProductModel(
                 id = responseModel.id,
                 title = responseModel.title,
