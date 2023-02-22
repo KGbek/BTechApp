@@ -80,6 +80,7 @@ class NewsFragment : Fragment(), NewsAdapterVertical.OnItemClicked {
             }
         }
         viewModel.getAllProducts()
+        setHorizontalContent()
     }
 
     fun showProducts(products: List<ProductModel>) {
@@ -97,16 +98,15 @@ class NewsFragment : Fragment(), NewsAdapterVertical.OnItemClicked {
         adapterVertical.setContent(vertical)
     }
 
-    fun setHorizontalContent(content: List<HorizontalNewsModel>){
-        val horizontal = content
-            .map {
-                HorizontalNewsModel(
-                    cartBackground1 = R.drawable.ad_image1_1,
-                    cartBackground2 = R.drawable.ad_image1_2,
-                    cartImage = R.drawable.ad_image1_3,
-                    adText = R.string.sony
-                )
-            }
+    fun setHorizontalContent() {
+        val horizontal = listOf(
+            HorizontalNewsModel(
+                cartBackground1 = R.drawable.ad_image1_1,
+                cartBackground2 = R.drawable.ad_image1_2,
+                cartImage = R.drawable.ad_image1_3,
+                adText = R.string.sony
+            )
+        )
         adapterHorizontal.setContent(horizontal)
     }
 

@@ -5,6 +5,7 @@ import com.example.btechapp.domain.repository.ProductRepository
 import com.example.btechapp.domain.use_case.GetAllProductsUseCase
 import com.example.btechapp.presentation.fragments.cart.CartViewModel
 import com.example.btechapp.presentation.fragments.home.HomeViewModel
+import com.example.btechapp.presentation.fragments.news.NewsViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.bind
 import org.koin.dsl.module
@@ -21,6 +22,10 @@ object ProductModule {
 
         viewModel {
             CartViewModel(get())
+        }
+
+        viewModel {
+            NewsViewModel(get())
         }
 
         factory {
