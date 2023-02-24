@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/image_view_cart"
+        android:layout_width="70dp"
+        android:layout_height="64dp"
+        android:layout_margin="12dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:src="@drawable/lot_example"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_lot"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/roboto"
+        android:text="Смартфон Samsung Galaxy A52 5G EU"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/image_view_cart"
+        app:layout_constraintTop_toTopOf="@+id/image_view_cart" />
+
+    <TextView
+        android:id="@+id/text_view_lot_cost"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/roboto"
+        android:text="45000 coм"
+        app:layout_constraintStart_toStartOf="@+id/text_view_lot"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_lot" />
+
+    <ImageView
+        android:id="@+id/image_view_arrow"
+        android:layout_width="10dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_arrow_drop_up"
+        app:layout_constraintStart_toEndOf="@+id/text_view_lot"
+        app:layout_constraintTop_toTopOf="@id/text_view_lot" />
+
+    <TextView
+        android:id="@+id/text_view_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="Цвет:"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@id/image_view_cart"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_cart" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

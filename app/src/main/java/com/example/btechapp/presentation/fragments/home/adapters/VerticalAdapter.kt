@@ -4,18 +4,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.btechapp.presentation.fragments.models.VerticalModel
 import com.example.btechapp.R
 import com.example.btechapp.databinding.ItemVerticalBinding
+import com.example.btechapp.domain.productModel.ProductModel
 
 class VerticalAdapter(
     private val onItemClicked: OnItemClicked
 ) :
     RecyclerView.Adapter<VerticalAdapter.ViewHolder>() {
 
-    private val verticalModels = mutableListOf<VerticalModel>()
+    private val verticalModels = mutableListOf<ProductModel>()
 
-    fun setContent(modelVertical: List<VerticalModel>) {
+    fun setContent(modelVertical: List<ProductModel>) {
         verticalModels.clear()
         verticalModels.addAll(modelVertical)
         notifyDataSetChanged()
@@ -30,7 +30,7 @@ class VerticalAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.onBindVertical(verticalModels[position])
         holder.itemView.setOnClickListener {
-            onItemClicked.clickListener(verticalModels[position])
+            onItemClicked.verticalClickListener(verticalModels[position])
         }
     }
 
@@ -41,17 +41,17 @@ class VerticalAdapter(
     class ViewHolder(private val binding: ItemVerticalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun onBindVertical(verticalModel: VerticalModel) {
+        fun onBindVertical(verticalModel: ProductModel) {
             binding.imageView.load(verticalModel.image)
             binding.imageViewLike.setImageResource(R.drawable.ic_like)
-            binding.textViewCredit.text = verticalModel.credit
-            binding.textViewModel.text = verticalModel.model
-            binding.textViewCost.text = verticalModel.cost
+            binding.textViewCredit.text = verticalModel.description
+            binding.textViewModel.text = verticalModel.title
+            binding.textViewCost.text = verticalModel.price
 
         }
     }
 
     interface OnItemClicked {
-        fun clickListener(verticalModel: VerticalModel)
+        fun verticalClickListener(model: ProductModel)
     }
 }

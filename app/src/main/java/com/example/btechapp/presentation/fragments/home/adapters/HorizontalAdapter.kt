@@ -5,16 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.btechapp.databinding.ItemHorizontalBinding
-import com.example.btechapp.presentation.fragments.models.HorizontalModel
+import com.example.btechapp.domain.productModel.ProductModel
 
 class HorizontalAdapter(
     private val onItemClick: OnItemClick
 ) :
     RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
 
-    private val horizontalModels = mutableListOf<HorizontalModel>()
+    private val horizontalModels = mutableListOf<ProductModel>()
 
-    fun setContent(model: List<HorizontalModel>) {
+    fun setContent(model: List<ProductModel>) {
         horizontalModels.clear()
         horizontalModels.addAll(model)
         notifyDataSetChanged()
@@ -29,7 +29,7 @@ class HorizontalAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.onBindHorizontal(horizontalModels[position])
         holder.itemView.setOnClickListener {
-            onItemClick.clickListener(horizontalModels[position])
+            onItemClick.horizontalClickListener(horizontalModels[position])
         }
     }
 
@@ -40,14 +40,14 @@ class HorizontalAdapter(
     class ViewHolder(private val binding: ItemHorizontalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun onBindHorizontal(horizontalModel: HorizontalModel) {
-            binding.imageViewPicture.load(horizontalModel.image)
-            binding.textViewCategoery.text = horizontalModel.category
+        fun onBindHorizontal(model: ProductModel) {
+            binding.imageViewPicture.load(model.image)
+            binding.textViewCategoery.text = model.category
 
         }
     }
 
     interface OnItemClick {
-        fun clickListener(horizontalModel: HorizontalModel)
+        fun horizontalClickListener(model: ProductModel)
     }
 }

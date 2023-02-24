@@ -5,15 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import by.kirich1409.viewbindingdelegate.viewBinding
-import com.example.btechapp.R
+import coil.load
 import com.example.btechapp.databinding.FragmentDetailsBinding
-import com.example.btechapp.presentation.fragments.details.viewPager.viewPagerAdapter.ViewPagerAdapter
+import com.example.btechapp.domain.productModel.ProductModel
 
 class DetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailsBinding
-    private lateinit var adapter: ViewPagerAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,6 +23,20 @@ class DetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.recyclerViewPager.adapter = adapter
+
+        showProductsDetails()
+    }
+
+    private fun showProductsDetails() {
+        val productDetail = arguments?.getSerializable("key") as ProductModel
+        with(binding){
+            textViewModel.text = productDetail.title
+            textViewColor.text= productDetail.description
+            imageViewLot.load(productDetail.image)
+            textViewReviews.text= productDetail.category
+            textViewMemory.text= productDetail.price
+        }
     }
 }
+
+
